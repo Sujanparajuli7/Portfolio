@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujan Parajuli | IT & Network Professional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="changeLang('en')">EN</button>
+            <button class="lang-btn" onclick="changeLang('de')">DE</button>
+            <button class="lang-btn" onclick="changeLang('jp')">JP</button>
+        </div>
+        <div class="profile-section">
+            <img src="profile.jpg" alt="Sujan" class="profile-img" id="profileImg">
+            <h2 id="name">Sujan Parajuli</h2>
+            <p id="title" class="role-text">Network Assistant</p>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#about" id="navAbout">Profile</a></li>
+            <li><a href="#skills" id="navSkills">Expertise</a></li>
+            <li><a href="mailto:info@sujanparajuli7.com.np" id="navContact">Message</a></li>
+        </ul>
+        <div class="sidebar-footer">© 2026 Sujan Parajuli</div>
+    </aside>
+
+    <main class="main-content">
+        <section id="about" class="section">
+            <span class="section-title" id="sectionIntro">Introduction</span>
+            <h1 id="heroTitle">I provide expert IT solutions.</h1>
+            <p id="heroDesc" class="description">
+                Kathmandu-based IT Support & Network Administrator focusing on virtualization and system security.
+            </p>
+        </section>
+
+        <section id="skills" class="section">
+            <span class="section-title" id="sectionWork">What I Do</span>
+            <div class="skills-list" id="skillsList">
+                Networking (VPN, LAN/WAN) • Troubleshooting • System Security
+            </div>
+        </section>
+    </main>
+
+    <!-- Natural Chatbot -->
+    <div class="chat-widget">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <span>Suzzan 💭</span>
+                <span class="close-chat" onclick="toggleChat()">×</span>
+            </div>
+            <div id="chatMessages" class="chat-messages">
+                <div class="msg bot" id="botGreet">Namaste! I am Suzzan. How can I help you? 💭</div>
+            </div>
+            <div id="typingIndicator" class="typing">Suzzan is thinking...</div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Kura garnuhos..." onkeypress="if(event.key==='Enter') handleChat()">
+                <button onclick="handleChat()">Send</button>
+            </div>
+        </div>
+        <div class="chat-button" onclick="toggleChat()">💭</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
